@@ -17,7 +17,7 @@ jobs:
     - name: Build Kernel
       run: |
         make -j$(nproc --all) ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-eabi-4.7/bin/arm-eabi- mrproper
-        make -j$(nproc --all) ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-eabi-4.7/bin/arm-eabi- cyanogen_grouper_defconfig
+        make -j$(nproc --all) ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-eabi-4.7/bin/arm-eabi- cyanogenmod_grouper_defconfig
         make -j$(nproc --all) ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-eabi-4.7/bin/arm-eabi- zImage
     - name: Upload zImage as Build Artifact
       uses: actions/upload-artifact@v2
